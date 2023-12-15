@@ -98,3 +98,8 @@ export default router
 // sends you all the to dos
 
 //we send the to dos in the response --> req and res
+
+//realm of express: front end to api endpoint
+//node is file read and file write which is the  backend from api to backend 
+
+//express is middle ware 
