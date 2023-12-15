@@ -103,3 +103,6 @@ export default router
 //node is file read and file write which is the  backend from api to backend 
 
 //express is middle ware 
+
+//RESTFUL standards: url is represented by resource in database 
+//
