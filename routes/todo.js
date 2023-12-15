@@ -133,4 +133,6 @@ router.delete('/:todoID', function(req,res) {
     try{
         const id = parseInt(req.params.todoId)
         //how do we filter out or find the index and we do a funciton and todo? 
+        //for each  how do call that on the data we are using -- if we find the one with the id, then we want to delete it splice  and bring in the index when we star tthe function -- splice  the index at index and single item  and then we can console log the data variable 
+        //then how do we write the file back the json version ? 
     })
