@@ -60,4 +60,18 @@ router.post('/', function(req, res) {
     })
 })
 
+router.put('/todos', function(req, res) {
+    
+
+    readFile 
+
+    if()
+
+    writeFile 
+    
+    )
+
+router.delete
+
+
 export default router
