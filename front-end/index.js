@@ -5,3 +5,6 @@ async function getToDos() {
 }
 
 console.log(getToDos())
+
+
+// cors error, couldn't handle the request --> security feature, you dont want anyone randomly hitting servers 

@@ -119,3 +119,9 @@ export default router
 // middle ware 
 
 // student confusing node with express --> check in with them 
+
+// RESTFUL: storing, requesting and responding with data in a specific way --> wikipedia or restful design 
+
+// what is and isn't middleware: are libraries to help with req and res helpful if you were to query another API or internally a library to handle internal logic to help --:>  middleware that would not be middleware that woudl be controlelr logic --> express happens between response and request --> you're moving 
+
+//middleware needs to make sure our request bdoy is being parsed properly. --> runnign front end 
