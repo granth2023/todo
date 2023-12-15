@@ -105,4 +105,5 @@ export default router
 //express is middle ware 
 
 //RESTFUL standards: url is represented by resource in database 
-//
+//how do we split out a router to a  controller?
+//what is MVC? 
