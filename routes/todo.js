@@ -106,4 +106,5 @@ export default router
 
 //RESTFUL standards: url is represented by resource in database 
 //how do we split out a router to a  controller?
-//what is MVC? 
+//what is MVC? model - controller - view  
+//controller logic is living in router and router files are getting bloated --> a lot of it can be modularized which is what a controller
