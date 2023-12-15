@@ -16,6 +16,7 @@ const PORT = process.env.PORT || 3000
 app.use(express.json())
 app.use(pathMiddleware)
 app.use(cors())
+//server now allows for cross origin requests --> what is a cross origin request?  
 // Routes
 app.use('/api', rootRouter)
 app.use('/api/todos', todosRouter)
