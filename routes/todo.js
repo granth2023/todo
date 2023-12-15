@@ -138,3 +138,8 @@ router.delete('/:todoID', function(req,res) {
         // how could we clean the code up? what is happenign when you work with routes --> create read update delete --> to work with dataset 
         //turn this into a lab, standarized the express, add some new features, and write the front end. to query it. but for now. 
     })
+
+    //how do we import the controller? 
+
+    //how do we update the delete route? 
+    //how do we create a variable to hold the writeTodoJson variable? What do we pass in there? 
