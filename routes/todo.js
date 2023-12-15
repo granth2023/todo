@@ -143,3 +143,9 @@ router.delete('/:todoID', function(req,res) {
 
     //how do we update the delete route? 
     //how do we create a variable to hold the writeTodoJson variable? What do we pass in there? 
+
+    // how do we test it once we are done? 
+
+    // are we deleting by ID? 
+
+    // 
