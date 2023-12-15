@@ -135,4 +135,6 @@ router.delete('/:todoID', function(req,res) {
         //how do we filter out or find the index and we do a funciton and todo? 
         //for each  how do call that on the data we are using -- if we find the one with the id, then we want to delete it splice  and bring in the index when we star tthe function -- splice  the index at index and single item  and then we can console log the data variable 
         //then how do we write the file back the json version ? 
+        // how could we clean the code up? what is happenign when you work with routes --> create read update delete --> to work with dataset 
+        //turn this into a lab, standarized the express, add some new features, and write the front end. to query it. but for now. 
     })
