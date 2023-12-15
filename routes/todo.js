@@ -62,6 +62,23 @@ router.post('/', function(req, res) {
 })
 
 router.put('/todos', function(req, res) {
+    try {
+        const { oldToDo, newToDo } = req.body;
+        const data = await fs.readFile('todo.json' , 'utf8')
+        let todos = JSON.parse(data);
+
+        let found = false;
+
+        todos = todos.map(todo => {
+            )
+
+
+    } catch (error) {
+        console.log("Failed to create todo", error);
+        res.status(404).json({ message: 'Failed to create todo'})
+
+    }
+}
     
 
     readFile 
@@ -76,3 +93,8 @@ router.delete
 
 
 export default router
+
+// we have a simple get 
+// sends you all the to dos
+
+//we send the to dos in the response --> req and res
