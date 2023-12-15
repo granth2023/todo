@@ -1,5 +1,6 @@
 // NPM packages
 import express from 'express'
+import cors from 'cors'; 
 
 // Custom middleware
 import pathMiddleware from './utils/pathMiddleware.js'
@@ -14,7 +15,7 @@ const PORT = process.env.PORT || 3000
 // Middleware
 app.use(express.json())
 app.use(pathMiddleware)
-
+app.use(cors())
 // Routes
 app.use('/api', rootRouter)
 app.use('/api/todos', todosRouter)
