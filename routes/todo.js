@@ -108,3 +108,14 @@ export default router
 //how do we split out a router to a  controller?
 //what is MVC? model - controller - view  
 //controller logic is living in router and router files are getting bloated --> a lot of it can be modularized which is what a controller
+
+//path middleware -- app.use 
+
+//path middleware -->" every time there is a req, res --> we make sure this a request basepath put on --> modify basePath for when we do something 
+// readn and write -- > how do you identify what is middleware? "
+
+// request and response middleware 
+
+// middle ware 
+
+// student confusing node with express --> check in with them 
