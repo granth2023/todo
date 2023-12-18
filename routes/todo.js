@@ -104,6 +104,11 @@ router.delete('./todos.json',function (res, res) {
     //what are we accepting to delete? 
      goodbyeToDo = req.body
 
+    //how do we get our json file ready to be updated for delete? 
+     fs.readFile('todo.json', function (err, data) { 
+
+     }
+
 })
 
 
