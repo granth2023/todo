@@ -99,16 +99,11 @@ router.put('/todos', function(req, res) {
 });
         
     
+//set up delete route, what are we deleting from? how are we packaging the deletion?
+router.delete('./todos.json',function (res, res) {
+    //
 
-    readFile 
-
-    if()
-
-    writeFile 
-    
-    )
-
-router.delete
+})
 
 
 export default router
