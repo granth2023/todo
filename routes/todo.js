@@ -8,6 +8,7 @@ const router = Router()
 
 // Todo data
 import todoData from '../todos.json' assert {type:'json'}
+import { error } from 'console'
 
 // GET /api/todos/
 // Returns all todos
@@ -63,22 +64,26 @@ router.post('/', function(req, res) {
 
 router.put('/todos', function(req, res) {
     try {
-        const { oldToDo, newToDo } = req.body;
+        //declare the new request into a variable
+        const newToDo  = req.body;
+        const updatingToDo; 
         const data = await fs.readFile('todo.json' , 'utf8')
         let todos = JSON.parse(data);
 
         let found = false;
 
         todos = todos.map(todo => {
-            )
+            if (todo === updatingToDo){
+                todo = newToDo;
+                found = true; 
+            }
+        } res.status(500).send("Error", error)
 
+        fs.writeFile('todo.json', JSON.stringify()
+    } catch (err) {
+        res.status(500).send("Error", err)
 
-    } catch (error) {
-        console.log("Failed to create todo", error);
-        res.status(404).json({ message: 'Failed to create todo'})
-
-    }
-}
+        
     
 
     readFile 
@@ -148,4 +153,11 @@ router.delete('/:todoID', function(req,res) {
 
     // are we deleting by ID? 
 
-    // 
+    // why do asynch function not give console logs? 
+
+    // why does fs write file in node documentation do it return a promisde? 
+
+    // what is passed? how do we passed json stirngify? what is passed in that function? 
+
+    //what if the write faile is just return to the wrong thig? 
+    

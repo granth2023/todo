@@ -14,3 +14,7 @@
 //do we also get the request and response in here? do we want the request and resposne in controller? 
 
 // what else do we import? well this is getting exported to where? 
+
+//how do we return something explicitly out of the function? 
+
+//wdo we create a variable for the response?  is that what is getting written? is this what we ar ereturning? how do we update 
