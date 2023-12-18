@@ -107,9 +107,15 @@ router.delete('./todos.json',function (res, res) {
     //how do we get our json file ready to be updated for delete? 
      let data = fs.readFile('todo.json', 'utf8')
      let todos = JSON. parse(data)
+
+     todos.filter( todo => {
+        if(goodbyeToDo === todo.id) {
+            todos.splice(0, 1) 
+     } res.status(500).send("not found")
+     )
      }
 
-})
+)
 
 
 export default router
