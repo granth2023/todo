@@ -66,8 +66,11 @@ router.put('/todos', function(req, res) {
     try {
         //declare the new request into a variable
         const newToDo  = req.body;
-        const updatingToDo; 
+        //declare the one we are updating by calling the id. 
+        const updatingToDo = req.body.id;
+        //read the file of the json using utf8 
         const data = await fs.readFile('todo.json' , 'utf8')
+        //parse the read file for json on the front end and store in variable
         let todos = JSON.parse(data);
 
         let found = false;
