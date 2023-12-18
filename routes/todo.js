@@ -67,18 +67,20 @@ router.put('/todos', function(req, res) {
         //declare the new request into a variable
         const newToDo  = req.body;
         //declare the one we are updating by calling the id. 
-        const updatingToDo = req.body.id;
+        const updatingToDoId = req.body.id;
         //read the file of the json using utf8 
         const data = await fs.readFile('todo.json' , 'utf8')
         //parse the read file for json on the front end and store in variable
         let todos = JSON.parse(data);
-
+        //use boolean to determine if its been found or not;
         let found = false;
 
+        //create function for the put using map, using the variable for front end json
         todos = todos.map(todo => {
-            if (todo === updatingToDo){
-                todo = newToDo;
+            //if the todo we are updating matches the todo we are looking at then we can change found and return our req.body
+            if (todo.id === updatingToDoId) {
                 found = true; 
+                return newToDo;
             }
         } res.status(500).send("Error", error)
 
