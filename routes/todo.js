@@ -84,12 +84,19 @@ router.put('/todos', function(req, res) {
             }
             //return todo which is now updated
             return todo;
-        } res.status(500).send("Error", error)
-
-        fs.writeFile('todo.json', JSON.stringify()
+        });
+        // if we can't have found then the todo was not found. 
+        if(!found){
+            return res.status(404).send("Todo Not Foudn");
+        }
+        //write the file back using stringfiy the json for the who file
+        fs.writeFile('todo.json', JSON.stringify(todos));
+        //return success
+        res.status(200).send("todo updated successfully")
     } catch (err) {
         res.status(500).send("Error", err)
-
+    }
+});
         
     
 
