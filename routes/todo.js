@@ -101,6 +101,7 @@ router.put('/todos', function(req, res) {
     
 //set up delete route, what are we deleting from? how are we packaging the deletion?
 router.delete('./todos.json',function (res, res) {
+    try{
     //what are we accepting to delete? 
      goodbyeToDo = req.body
 
@@ -108,14 +109,18 @@ router.delete('./todos.json',function (res, res) {
      let data = fs.readFile('todo.json', 'utf8')
      let todos = JSON. parse(data)
 
-     todos.filter( todo => {
-        if(goodbyeToDo === todo.id) {
-            todos.splice(0, 1) 
-     } res.status(500).send("not found")
-     )
-     }
+    const filteredToDos = todos.filter( todo => JSON.stringify(todo) !==  JSON.stringify(goodbyeToDo));
+    if(filteredToDos.length  === todos.length) {
+        return res.status(404).send("not found");
+    } 
 
-)
+    fs.writeFile('todos.json', JSON.stringify(filteredToDos));
+
+    res.status(200).send('success');
+} catch (err){
+    res.status(500).send('error: ' + err.message);
+}
+});
 
 
 export default router
