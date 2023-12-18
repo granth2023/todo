@@ -82,6 +82,8 @@ router.put('/todos', function(req, res) {
                 found = true; 
                 return newToDo;
             }
+            //return todo which is now updated
+            return todo;
         } res.status(500).send("Error", error)
 
         fs.writeFile('todo.json', JSON.stringify()
