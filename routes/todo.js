@@ -101,7 +101,8 @@ router.put('/todos', function(req, res) {
     
 //set up delete route, what are we deleting from? how are we packaging the deletion?
 router.delete('./todos.json',function (res, res) {
-    //
+    //what are we accepting to delete? 
+     goodbyeToDo = req.body
 
 })
 
